@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/toaf-logo-color.svg" alt=""/>
+   </a>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">
+      Search
+    </button>
+  </form>
+  </div>
+</nav>
+
+  <header  *ngIf="!admen.isAdmen">
+    <div class="logo" routerLink="">
+      <img src="assets/sa-logo.png" alt="Logo">
+    </div>
+    <nav class="navbar ">
+      <ul class="hidden">
+        <li  class="listItem" [routerLink]="['home']">
+          <a>HOME</a>
+        </li>
+        <li class="listItem" [routerLink]="['products']" >
+          <a>GALLARY</a>
+        </li>
+        <li  class="listItem" [routerLink]="['']" >
+          <a>EVENTS</a>
+        </li>
+        <li  class="listItem" [routerLink]="['']" >
+          <a>ABOUT US</a>
+        </li>
+        <li  class="listItem" *ngIf="!user.isLogin" routerLink="/login">
+          <a>LOGIN</a>
+        </li>
+        <li  class="listItem show" *ngIf="user.isLogin" >
+          <a (click)="handleClick()" routerLink="">Log Out</a>
+        </li>
+        <li  class="listItem"routerLink="register"  *ngIf="!user.isLogin">
+          <a>REGISTER</a>
+        </li>
+      </ul>
+      <app-avatar *ngIf="user.isLogin"></app-avatar>
+      <div id="menu-bar"  class=" fas fa-bars  mx-5 " data-bs-toggle="dropdown" aria-expanded="false"  *ngIf="!user.isLogin">
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li class="dropdown-item"  [routerLink]="['products']" >
+            <a>Gallery</a>
+          </li>
+          <li class="dropdown-item"  [routerLink]="['']" >
+            <a>Events</a>
+          </li>
+          <li class="dropdown-item"  routerLink="/login">
+            <a>Log in</a>
+          </li>
+          <li class="dropdown-item"  routerLink="register" >
+            <a> Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>

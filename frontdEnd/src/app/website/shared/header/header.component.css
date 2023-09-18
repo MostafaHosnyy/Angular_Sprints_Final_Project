@@ -1,0 +1,53 @@
+.btn{
+  /* padding: 1rem 1rem; */
+  background: var(--primary);
+  color: var(--light);
+  font-size: 1.5rem;
+}
+header .logo{
+  cursor: pointer;
+}
+header .navbar ul .listItem , header .navbar ul .listItem a{
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  vertical-align: middle;
+  color: #fff;
+  text-decoration: none;
+  display: inline;
+  cursor: pointer;
+}
+header .navbar ul li:hover , header .navbar ul li a:hover{
+  color: var(--primary);
+}
+#menu-bar{
+  font-size: 3rem;
+  cursor: pointer;
+  color: #666;
+  border: .1rem solid #666;
+  border-radius: .3rem;
+  padding: .5rem 1.5rem;
+  display: none;
+}
+
+.dropdown-item{
+  display: block ;
+  font-size: 1.5rem ;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .listItem{
+    display: none !important;
+  }
+  .show{
+    display: inline-block !important;
+  }
+  #menu-bar{
+    display: block;
+  }
+  .dropdown-item{
+    display: block ;
+    font-size: 1.5rem ;
+    padding: 1rem;
+    margin: auto;
+  }
+}

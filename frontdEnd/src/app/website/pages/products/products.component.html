@@ -1,0 +1,10 @@
+
+<section class="popular" id="popular" >
+    <h3 class="heading">Discover Art You Love <br> From the World's Leading Online Gallery</h3>
+    <div class="box-container" >
+        <div *ngFor="let product of allProducts">
+        <app-product-cart [data]="product"></app-product-cart>
+    </div>
+    </div>
+</section>
+
