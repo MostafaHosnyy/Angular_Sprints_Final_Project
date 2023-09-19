@@ -6,7 +6,7 @@
         
         <div class="row gy-4 mt-4">
 <div class="col-12 col-6">
-    <input type="email" placeholder="enter Email" class="form-control "
+    <input type="email" placeholder="email Admen: mostafa@gmail.com" class="form-control "
      [(ngModel)]="userData.email" name="email" #email="ngModel" required email minlength="5">
      <div class="alert alert-danger" *ngIf="loginform.submitted && email.invalid">
         <div *ngIf="email.errors?.['required']">Email is required</div>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="col-12 col-6">
-    <input type="password" placeholder="enter password" class="form-control " 
+    <input type="password" placeholder="password Admen: 12345678" class="form-control " 
     [(ngModel)]="userData.password" name="password" #password="ngModel"
      required (input)="msgError = null" >
     <div class="alert alert-danger" *ngIf="password.invalid && (password.dirty || loginform.submitted )">
@@ -24,6 +24,7 @@
     </div>
 </div>
 <button class="btn ">Login</button>
+
 </div>
 </form>
 </div>
