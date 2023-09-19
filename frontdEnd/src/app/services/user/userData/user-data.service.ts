@@ -9,7 +9,7 @@ export class UserDataService {
 
   constructor(private http : HttpClient) { }
 
-  baseUrl = "http://localhost:5000/api/users"
+  baseUrl = "http://localhost:5000/api/users/"
   isLogin = false
 
   logIn(data: any):Observable<any>{
