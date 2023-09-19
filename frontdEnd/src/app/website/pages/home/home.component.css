@@ -13,8 +13,8 @@
 }
 
 .home .content h1{
-    font-size: 5rem;
-    color: var(--light);
+    font-size: 7rem;
+    color: var(--dark);
 }
 
 .btn{
