@@ -19,8 +19,8 @@ export class LoginComponent {
   handleSubmit(form : NgForm){
     if(form.valid){
       this.user.logIn(this.userData).subscribe(res=>{
-        localStorage.setItem('user', JSON.stringify(res.data.user));
-        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('user', JSON.stringify(res.user));
+        localStorage.setItem('token', res.token);
         this.user.isLogin = true
       this.router.navigateByUrl('/')
       }, (e)=>{
